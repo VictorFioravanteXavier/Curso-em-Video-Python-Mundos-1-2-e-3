@@ -1,0 +1,556 @@
+OPERAÇÕES MATEMÁTICAS
+
++ => para somar
+- => para subtrair
+/ => para dividir 
+* => para multiplicar
+** => para colocar o número em potencia
+% => para achar o resto da divisão
+// => para achar divisão inteira 
+
+==============================================================================================================================
+
+UTILIZANDO O .IS
+
+.isalnum() => verificar se todos os caracteres de uma string são alfanuméricos (letras ou números).
+    Ex1.
+        l = '02020aaa0a'
+        print(l.isalnum())
+        Output: True
+    
+    Ex2.
+        l ='%¨&%'
+        print(l.isalnum())
+        Output: False
+
+
+.isalpha() => verificar se uma string contém apenas letras.
+    Ex1.
+        l = 'abaca'
+        print(l.isalpha())
+        Output: True
+    
+    Ex2.
+        l = '255a aaa25'
+        print(l.isalpha())
+        Output: False
+
+
+.isascii() => verificar se uma string contém apenas caracteres ASCII (American Standard Code for Information Interchange), que são os primeiros 128 caracteres do conjunto de caracteres Unicode.
+    Ex1.
+        l = '[]][]'
+        print(l.isascii())
+        Output: True
+    
+    Ex2.
+        l = '091093093091093' => '[]][]'
+        print(l.isascii())
+        Output: True
+
+
+.isdecimal() => verificar se uma string contém apenas caracteres decimais (números de 0 a 9).
+    Ex1.
+        l = '10185'
+        print(l.isdecimal())
+        Output: True
+
+    Ex2.
+        l ='string_with_numbers4786'
+        print(l.isdecimal())
+        Output: False
+
+
+.isdigit() => verificar se uma string contém apenas dígitos (números de 0 a 9).
+    Ex1.
+        l = '1234'
+        print(l.isdigit())
+        Output: True
+
+    Ex2.
+        l = '-12-34-'
+        print(l.isdigit())
+        Output: False
+
+
+.isidentifier() => verificar se uma string é um identificador válido em Python. Uma string é considerada um identificador válido se contiver apenas letras alfanuméricas (a-z) e (0-9) ou sublinhados (_). Um identificador válido não pode começar com um número ou conter espaços.
+    Ex1.
+        l = 'Demo_002'
+        print(l.isidentifier())
+        Output: True
+    
+    Ex2.
+        l = 'my demo'
+        print(l.isidentifier())
+        Output: False
+
+
+.islower() => verificar se todos os caracteres de uma string são minúsculos.
+    Ex1.
+        l = 'abacaa'
+        print(l.islower())
+        Output: True
+
+    Ex2.
+        l ='aBaCaa'
+        print(l.islower())
+        Output: False
+
+
+.isupper() => verificar se todos os caracteres de uma string são maiúsculas.
+    Ex1.
+        l = 'ABACAA'
+        print(l.isupper())
+        Output: True
+
+    Ex2.
+        l = 'AbAcAa'
+        print(l.isupper())
+        Output: False
+
+
+.isnumeric() => verificar se uma string contém apenas caracteres numéricos, como caracteres numéricos unicode e números arábicos.
+    Ex1.
+        l = '325151'
+        print(l.isnumeric())
+        Output: True
+
+    Ex2.
+        l = '1651asa'
+        print(l.isnumeric())
+        Output: False
+
+
+.isprintable() => verificar se todos os caracteres de uma string são imprimíveis/printaveis.
+    Ex1.
+        l = 'ad32a3d1a23'
+        print(string.isprintable())
+        Output:True
+
+    Ex2.
+        string = 'ad32a3 \n d1a23'
+        print(string.isprintable())
+        Output:False
+
+
+.isspace() => verificar se uma string contém apenas espaços em branco.
+    Ex1.
+        l = '   '
+        print(l.isspace())
+        Output: True
+
+    Ex2.
+        l = '445ad54    '
+        print(l.isspace())
+        Output: False
+
+
+.istitle() => verificar se uma string está em formato de título, ou seja, se a primeira letra de cada palavra está em maiúscula e todas as outras letras estão em minúscula.
+    Ex1.
+        l = 'Adadad Adadada'
+        print(l.istitle())
+        Output: True
+
+    Ex2.
+        l = 'aaaaaaaaaa'
+        print(l.istitle())
+        Output:False
+
+==============================================================================================================================
+
+FORMATAÇÃO DE STRING
+
+:.2f => é uma formatação de string para exibir um número com apenas duas casas decimais após o ponto decimal.
+    Ex1.
+        l = 0.5
+        print(f'{l:.2}')
+        Output: 0.50
+
+:2 => é uma formatação de string para exibir com um campo de largura mínima de dois caracteres.
+:^2 => é uma formatação de string para exibir com um campo de largura mínima de dois caracteres centalizado.
+:<2 => é uma formatação de string para exibir com um campo de largura mínima de dois caracteres na esquerda.
+:>2 => é uma formatação de string para exibir com um campo de largura mínima de dois caracteres na direita.
+
+
+.len() => mostra o comprimento da lista/string
+.count('letra que deseja') => conta quantas vezes aparece a letra que foi colocada
+.find('oque deseja achar') => mostra em que momento/posição começou o que escolheu
+'oque deseja achar' in lista/string => mostra se o que quer está na lista/string
+.replace('oque deseja trocar', 'oque é para trocar') => troca fases da lista/string
+.upper() => deixa toda string em maiuscula
+.lower() => deixa toda string em minuscula
+.capitalize() => vai deixar somete primera letra da string em maiuscula o resto em minuscula
+.title() => se tem cabre de palavra vai a primeria letra vai ficar maiuscula (Ex. victor fioranate -> Victor Fioranate)
+.strip() => remove todos os espaços no inicio e no final da string (Ex. '   aa a  ' -> 'aa a')
+.rstri() => vai remover somente os ultimos espaços no caso os da direita (Ex. '   aa a  ' -> '   aa a')
+.split() => divide uma string pelos espaços gerando uma lista (Ex. 'Victor Fioravante' -> 'Victor' 'Fioravante')
+'separador que deseja'.join(lista) => junta uma lista dividida (Ex. 'Victor' 'Fioravante' -> 'Victor Fioravante')
+.max(Variaves) => acha qual é o maior número em variaves
+.min(Variaves) => acha qual é o menor número em variaves
+'oque deseja selecionar'.join(lista, 'separador que deseja') => junta elementos de uma lista e coloca o separdor que deseja
+sorted() => ordena os elementos alfabeticamente
+
+bin(variavel_inteira) = transforma ela em binária
+oct(variavel_inteira) = transforma ela em octal
+hex(variavel_inteira) = transforma ela em hexadecimal
+
+==============================================================================================================================
+
+BIBLIOTECAS
+
+import (a biblioteca que quer) => importa toda a biblioteca que foi colocada.
+from (a biblioteca que quer) import (o que quer importar) => importa algo especifico de uma biblioteca.
+
+import math => é uma bibliotea que quem com mais funções matematicas como: 
+    ceil => arredonda para cima.
+    floor => arredonda para baixo.
+    trunc => vai eliminar a virgula (Ex. 2,5 -> 2).
+    pow => vai fezer a potência dos números.
+    sqrt => vai calcular a raiz quadrada.
+    factorial => calcula o fatorial de um número.
+
+import datetime => para saber a data da maquina que o código está funcionando
+    from datetime import date => data = date.today().year()  - para saber somente o ano
+
+==============================================================================================================================
+
+CORES
+
+\033[estilo;texto;backm
+
+estilo = estilo do texo
+    0 = none = sem estilo
+    1 = bold = negrito
+    4 = underline = sublinhar o texo
+    7 = negative = inverter as configurações
+
+texo = cor que deseja colocar no texto
+    30 = branco
+    31 = vermelho
+    32 = verde
+    33 = amarelo
+    34 = azul
+    35 = roxo
+    36 = ciano
+    37 = cinza
+
+back = a cor de fundo do texto 
+    40 = branco
+    41 = vermelho
+    42 = verde
+    43 = amarelo
+    44 = azul
+    45 = roxo
+    46 = ciano
+    47 = cinza
+
+ex: print('\033[4;31;40mOlá mundo\033[m')
+
+==============================================================================================================================
+
+TUPLAS/LISTAS/DICIONÁRIOS (variáves compostas)
+
+variavel.sort() => para ordenar
+variavel.sort(reverse=True) => para ordenar de forma reversa 
+len(variavel) => retorna quantos itens tem dentro
+
+- Tuplas
+    As tuplas são variáveis compostas e imutáveis que permitem armazenar vários valores em uma mesma estrutura, acessíveis por chaves individuais.
+
+    iniciando um tupla:
+
+    variavel = (1, 2, 3, 4)
+    variavel = 1, 2, 3, 4 (não precisa ter () para fazer uma tupla)
+
+    print(sorted(variavel)) (ordena os elementos da tupla em ordem crescente)
+
+    Ex.
+        a = (1, 2, 3)
+        b = (4, 5, 6)
+        c = a + b
+
+        print(c)
+        Output: (1, 2, 3, 4, 5, 6)
+
+- Listas
+
+    ligações de listas:
+        lista(b) = lista(a) => elas ficam ligadas e se alguma coisa for alterada em uma a outra se altera tambem
+        lista(b) = lista(a)[:] => elas não ficam ligadas mas a lista(b) recebe todos os valores da lista(a)
+
+    iniciando uma lista:
+        (VARIAVEL) = [] => para fazer uma variavel virar uma lista
+        lista.append((o que deseja)) => para adicional algo na lista
+        lista.insert((posição que deseja),(o que deseja)) => ele vai colocar todos um para traz dele e vai ser colocado na posição que deseja
+        lista = list(range(0,10)) => vai colocar os números de 0 até 10 na lista
+
+    eliminações em listas (eles eliminam o elemento reposicina a lista):
+        del(lista[(oq deseja)]) => para eliminar tal posição 
+        lista.pop((oq deseja)) => para eliminar tal posição 
+        lista.remove((oq deseja)) => elimina o conteudo que deseja
+        lista.pop() => elimina o ultimo elemento
+    
+    lista dentro de lista:
+        Ex.
+            variavel = [1,2,3,4] depois [2,3,4,5]
+            variaveis = []
+            variaveis.append(variavel[:])
+
+        Ex output.
+            1.  print(variaveis)
+                output: [[1,2,3,4], [2,3,4,5]] => lista dentro de outra lista
+
+            2.  print(variavies[0])
+                output: [1,2,3,4] => printa a posição da lista em que está lista no caso 0
+            
+            3.  print(variaveis[0][0])
+                output: 1 => printa na posoção 0 dentro da lista em que está no caso se quiser a posição 1 da lista 0 só mudar o segundo número 0 por 1 [0][1]
+            
+    output listas: 
+        Ex.
+            variavel = [1,2,3,4]
+
+        1.  print(variavel)
+            output: [1,2,3,4]
+        
+        2.  print(*variavel)
+            output: 1 2 3 4 => retira [] da lista
+
+
+- Dicionário
+    iniciando um dicionário:
+        1.  variavel = {}
+        2.  variavel = dict()
+
+    Ex. 
+        d = {}
+        d = {'nome': 'Pedro', 'idade': 25}
+    
+        Ex1.
+            print(d['nome'])
+            output: Pedro
+        
+        Ex2.
+            print(d['idade'])
+            output: 25
+    
+    Colocando +1 coisa nele:
+        d['sexo'] = 'M'
+        d = {'nome': Pedro, 'idade': 25, 'sexo' = 'M'}
+    
+    deletando:
+        del(d['idade'])
+        d = {'nome': Pedro, 'sexo' = 'M'}
+    
+    printando:
+        somente os valores:
+            print(d.values())
+            output: Pedero 25 M
+        
+        somente as chaves:
+            print(d.keys())
+            output: nome idade sexo
+        
+        todos os valores keys e values:
+            print(d.items())
+            output: ([('nome', 'Pedro'),('idade', 25),('sexo', 'M')] )
+
+    
+    for:
+        Ex1:
+            for j, i in d.items():
+                print(f'O {j} é {i}')
+
+            output: O nome é Pedro
+                    O idade é 25
+                    O sexo é M
+    
+    lista com dicionários:
+        Ex1: 
+            l= []
+            l.append({'nome':Pedro,'idade':25})
+            print(l)
+            Saída: [{'nome':'Pedro','idade':25}]
+
+        Ex2: 
+            l = []
+            d = {'nome':'nome', 'Pedro','idade', 25,'sexo', 'M'}
+            l.append(d) => liga o dicionário com a lista
+            l.append(d.copy()) => faz uma copía do dicionário para lista
+            
+==============================================================================================================================
+
+Repetições
+
+While = enquanto
+    while variavel >= 0:
+        variavel = int(input('digite algo'))
+        print(variavel)
+    
+    while True:
+        variavel = int(input('digite algo'))
+        print(variavel)
+
+        if variavel <= 0:
+            break
+
+for = para
+    for i in range (0,10):
+        print(i)
+    
+    for i in "lista/tupla/dicionario": (para cada elemento na lista ou dicionário etc.)
+        print(i)
+    
+    for pos, i in enumerate("lista/tupla/dicionario"): (posição e valor da iteração atual no loop)
+        print(f"Posicao {pos} - Valor {i}")
+
+==============================================================================================================================
+
+FUNÇÕES
+
+print/len/input/int/float/etc : são funções que já vem prontas em python
+
+Para colocar diversos números no def:
+    def exemplo(*num): => coloca diversos números
+
+Interactive Help
+    help() => serve pra saber sobre uma função/bibliotea expecifica
+    print(exemplo.__doc__) => faz a mesma coisa só mudando a formatação
+
+Docstrings
+    é para você colocar oque cada parte da def faz no caso tu fala o que está acontecndo utilizando as Docstrings podem usar o comnado help() na tua def
+    Ex_sem_Docstrings: 
+
+        def soma(p,s):
+            r = p + s
+
+        help(soma())
+
+        output: soma(p,s)
+
+    Ex_com_Docstrings:
+        def soma(p,s):
+        """ Funçao para somar dois números
+            :param p: primeiro número
+            :param s: segundo número
+            :return : sem return"""
+            r = p + s
+        help(soma())
+
+        output: 
+            soma(p,s)
+            Funçao para somar dois números
+            :param p: primeiro número
+            :param s: segundo número
+            :return : sem return
+
+Parâmetros opcionais:
+    serve para não dar bug no código então no caso se não colocar nada já tem uma coisa pre setada
+
+Escopo de variaveis
+    no caso se tu declarar uma variavel dentro de uma def ela só vai funcionar dentro da def;
+        def test(x):
+            x = x -> Escopo local
+            a = 4 -> Escopo local
+            print(x, a)
+        
+        a = 3 -> Escopo global
+        test(a)
+        print(x, a)
+
+        output: 3, 4
+                Erro!, 3
+
+    Outra forma:
+        def test(x):
+            global( a )
+            x = x -> Escopo local
+            a = 4 -> Escopo global
+            print(x, a)
+        
+        a = 3 -> Escopo global
+        test(a)
+
+        print(x, a)
+
+        output: 3, 4
+                Erro!, 4
+
+Retornando valores:
+    É dar o comando return;
+        def soma(a = 0, b = 0, c = 0)
+            s = a + b + c
+            return s
+
+        resp = soma(2,3,5)
+        print(resp)
+        ou 
+        print(soma(2,3,5))
+
+==============================================================================================================================
+
+Modularização ou Construir modulos
+é no caso fazer uma def em outro arquivo .py 
+
+Ex:
+main.py
+    import calculo
+
+    n = 3
+    print(calculo.dobro(n))
+
+    output: 6
+
+calculo.py
+    def dobro(n):
+        return n * 2
+
+==============================================================================================================================
+
+Pacote
+é uma pasta que contem modulos que são serpados por assuntos variados como números, str, datas, cores, etc.
+
+todas as pastas criadas por um pacote tem que ter dentro delas um __init__.py
+
+tu vai fazer uma pasta e dentro dessa pasta coloca __init__.py quando importar a pasta principal coloca (from principal import secundaria)
+isso vai impotar as def's de dentro da secundaria
+
+
+==============================================================================================================================
+
+Tratamento de Erro
+
+try = Tente
+except = Caso dê erro
+else = Senão
+finally = Sempre
+
+Ex:
+    try:
+        n1 = int(input())
+        n2 = int(input())
+        r = n1 / n2
+    except:
+        print('Erro') => caso ocorra algum erro ele irá executar esse bloco
+    else:
+        print(r) => acontece se não der erro
+    finally:
+        print("Fim") => sempre acontece
+
+
+para mostar o erro que ocorreu fazemos :
+    try:
+        n1 = int(input())
+        n2 = int(input())
+        r = n1 / n2
+    except Exeption as erro:
+        print(erro.__class__)
+
+    Entrada:
+        n1 = 2
+        n2 = oi
+
+    output:
+        <class 'ValueError'>
+
+
+pode ter infinitos except com diferentes tipos de erros
